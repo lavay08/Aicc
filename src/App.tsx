@@ -308,8 +308,9 @@ function App() {
                   </div>
                 </div>
               </div>
+
             </div>
-            {/* Call to Action Section */}
+{/* Call to Action Section */}
 <div className="py-12 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     
@@ -373,6 +374,8 @@ function App() {
                 </div>
               </div>
               </footer>
+
+           
           </>
         );
     }
