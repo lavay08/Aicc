@@ -350,6 +350,72 @@ function App() {
                 </div>
               </div>
             </div>
+            {/* Call to Action Section */}
+<div className="py-12 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    
+    {/* Text Content */}
+    <div>
+      <h2 className="text-sm md:text-base font-medium mb-4 text-left leading-relaxed">
+        As India continues to attract the attention of the world, AICC endeavours to strengthen India’s international engagement globally and also work towards making AICC the first port of call for overseas delegations that wish to engage with India and for Indian industry that wishes to access traditional and emerging markets overseas.
+
+        <br /><br />
+
+        The primary goal of the AICC is to undertake activities to connect Indian business with global business. AICC also works towards developing market access for Indian exporters; identifying and addressing the needs of the small sector to make it more competitive; promoting cooperation with counterpart organizations; adopting a proactive and partnership approach with foreign governments on various international issues concerning the Indian economy, among others.
+
+        <br /><br />
+
+        We, on a regular basis, organize International Events, Exhibitions, Seminars, Net-working Sessions with counterpart organizations, multilateral and academic institutions and other policy making bodies to build a strong Trade and Investment relationship between India and the rest of the world.
+
+        <br /><br />
+        Regards,<br />
+        <strong>Rajendra Kumar Goel</strong><br />
+        Chairman, All India Chamber of Commerce
+      </h2>
+
+      <p className="text-sm md:text-base mb-6 text-left">
+        Join the All India Chamber of Commerce and unlock a world of opportunities.
+      </p>
+      
+      <button className="bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 shadow-md hover:shadow-orange-500/25 transform hover:scale-105">
+        Become a Member
+      </button>
+    </div>
+
+    {/* Image Content */}
+    <div className="flex justify-center">
+      <img
+        src="/your-image-path.jpg"
+        alt="AICC Vision"
+        className="rounded-xl shadow-lg max-w-full h-auto"
+      />
+    </div>
+  </div>
+</div>
+
+
+            {/* Footer Section */}
+            <footer className="bg-gray-900 text-white py-12">
+              <div className="max-w-7xl mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                  <div className="text-center md:text-left mb-6 md:mb-0">
+                    <h3 className="text-2xl font-bold mb-2">Join the AICC Community</h3>
+                    <p className="text-gray-400">Connect with us for the latest updates and opportunities.</p>
+                  </div>
+                  <div className="flex space-x-4">
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Twitter</a>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a>
+                  </div>
+                </div>
+                <div className="mt-8 text-center text-sm text-gray-500">
+                  Copyright © 2022 All India Chamber of Commerce, All rights reserved.
+                </div>
+              </div>
+              </footer>
+
+           
           </>
         );
     }
