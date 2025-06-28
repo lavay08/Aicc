@@ -49,10 +49,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 text-white text-sm py-3 px-4 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 text-white text-xs py-2 px-4 relative overflow-hidden">
+
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center space-y-3 lg:space-y-0 relative z-10">
-          <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+
             <div className="flex items-center space-x-2 hover:text-orange-100 transition-all duration-300 group cursor-pointer">
               <div className="p-1.5 bg-white/10 rounded-full group-hover:bg-white/20 transition-all duration-300">
                 <Phone size={14} className="group-hover:scale-110 transition-transform duration-300" />
@@ -117,23 +119,24 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             {/* Logo */}
             <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => handleNavigation('home')}>
               <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-600 via-orange-500 to-red-500 rounded-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
-                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-inner relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">AICC</span>
+                  <div className="w-12 h-12 bg-white rounded-xl">
+                  <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-red-500 rounded-lg">
+                  <span className="text-white font-bold text-xs">AICC</span>
+
                     </div>
                   </div>
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-red-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-500"></div>
               </div>
               <div className="hidden md:block">
-                <h1 className="text-2xl font-bold text-gray-800 leading-tight group-hover:text-orange-600 transition-colors duration-300">
+              <h1 className="text-xl font-bold text-gray-800 leading-tight">
                   ALL INDIA CHAMBER<br />
-                  <span className="text-xl">OF COMMERCE</span>
+                  <span className="text-base">OF COMMERCE</span>
                 </h1>
                 <p className="text-sm text-orange-600 font-semibold mt-1 flex items-center space-x-1">
-                  <Globe size={14} />
+                  <Globe size={10} />
                   <span>WE FACILITATE BUSINESS ACROSS THE GLOBE</span>
                 </p>
               </div>
@@ -249,10 +252,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
             {/* Search and CTA */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-300 group">
+              <button className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center hover:border-orange-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-300 group">
                 <Search size={20} className="group-hover:scale-110 transition-transform duration-300" />
               </button>
-              <button className="bg-gradient-to-r from-orange-600 to-red-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-orange-700 hover:to-red-600">
+              <button className="bg-gradient-to-r from-orange-600 to-red-500 text-white px-5 py-2.5 text-sm rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-orange-700 hover:to-red-600">
                 Join Now
               </button>
             </div>
@@ -271,10 +274,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="lg:hidden pb-6 border-t border-gray-100 bg-gradient-to-b from-white to-gray-50">
-              <div className="pt-6 space-y-2">
+              <div className="pt-4 space-y-2">
                 <button 
                   onClick={() => handleNavigation('home')}
-                  className={`block w-full text-left font-bold py-3 px-6 rounded-xl transition-all duration-300 ${
+                  className={`block w-full text-left font-bold py-2 px-5 rounded-xl transition-all duration-300 ${
                     currentPage === 'home' 
                       ? 'text-orange-600 bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600' 
                       : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
@@ -340,6 +343,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           )}
         </div>
       </nav>
+      
     </>
   );
 };
