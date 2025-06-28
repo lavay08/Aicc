@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import AboutPage from './components/AboutPage';
-
+import International from './components/International';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -9,6 +9,8 @@ function App() {
     switch (currentPage) {
       case 'about':
         return <AboutPage />;
+        case 'international':
+      return <International />;
       default:
         return (
           <>
