@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import AboutPage from './components/AboutPage';
-import International from './components/International';
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -9,32 +9,73 @@ function App() {
     switch (currentPage) {
       case 'about':
         return <AboutPage />;
-        case 'international':
-      return <International />;
       default:
         return (
           <>
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-[80vh] flex items-center justify-center overflow-hidden">
-              {/* Animated Background Elements */}
+              {/* Enhanced Animated Background Elements */}
               <div className="absolute inset-0">
+                {/* Primary floating orbs */}
                 <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-full blur-3xl animate-spin-slow"></div>
+                
+                {/* Additional floating elements */}
+                <div className="absolute top-32 right-1/4 w-48 h-48 bg-yellow-500/8 rounded-full blur-2xl animate-pulse delay-500"></div>
+                <div className="absolute bottom-32 left-1/4 w-64 h-64 bg-orange-400/8 rounded-full blur-2xl animate-pulse delay-700"></div>
+                <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-red-400/10 rounded-full blur-xl animate-pulse delay-300"></div>
+                
+                {/* Moving geometric shapes */}
+                <div className="absolute top-16 left-1/2 w-4 h-4 bg-orange-400/30 rotate-45 animate-bounce delay-200"></div>
+                <div className="absolute bottom-24 left-1/3 w-6 h-6 bg-red-400/30 rounded-full animate-bounce delay-500"></div>
+                <div className="absolute top-1/3 right-16 w-3 h-3 bg-yellow-400/40 rotate-45 animate-bounce delay-700"></div>
+                
+                {/* Floating particles */}
+                <div className="absolute top-40 left-20 w-2 h-2 bg-orange-300/50 rounded-full animate-ping delay-100"></div>
+                <div className="absolute bottom-40 right-20 w-2 h-2 bg-red-300/50 rounded-full animate-ping delay-300"></div>
+                <div className="absolute top-60 right-40 w-1 h-1 bg-yellow-300/60 rounded-full animate-ping delay-500"></div>
+                <div className="absolute bottom-60 left-40 w-1 h-1 bg-orange-400/60 rounded-full animate-ping delay-700"></div>
+                
+                {/* Rotating rings */}
+                <div className="absolute top-1/4 left-1/4 w-80 h-80 border border-orange-500/10 rounded-full animate-spin-slow"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-60 h-60 border border-red-500/10 rounded-full animate-spin-slow delay-1000" style={{animationDirection: 'reverse'}}></div>
+                
+                {/* Grid pattern overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow"></div>
+                
+                {/* Gradient waves */}
+                <div className="absolute inset-0">
+                  <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-orange-500/5 to-transparent animate-pulse delay-200"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-500/5 to-transparent animate-pulse delay-400"></div>
+                  <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-orange-500/3 to-transparent animate-pulse delay-600"></div>
+                  <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-red-500/3 to-transparent animate-pulse delay-800"></div>
+                </div>
+                
+                {/* Floating lines */}
+                <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent animate-pulse delay-1000"></div>
+                <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent animate-pulse delay-1200"></div>
+                
+                {/* Radial burst effect */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-4 h-4 bg-orange-400/20 rounded-full animate-ping"></div>
+                  <div className="absolute inset-0 w-8 h-8 bg-orange-400/10 rounded-full animate-ping delay-200"></div>
+                  <div className="absolute inset-0 w-12 h-12 bg-orange-400/5 rounded-full animate-ping delay-400"></div>
+                </div>
               </div>
               
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
               
               <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
                 <div className="mb-6">
-                  <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
+                  <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider mb-4 animate-pulse">
                     Established 1920
                   </span>
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
                   Welcome To The{' '}
-                  <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent animate-pulse">
                     AICC
                   </span>
                 </h1>
@@ -308,74 +349,7 @@ function App() {
                   </div>
                 </div>
               </div>
-
             </div>
-{/* Call to Action Section */}
-<div className="py-12 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    
-    {/* Text Content */}
-    <div>
-      <h2 className="text-sm md:text-base font-medium mb-4 text-left leading-relaxed">
-        As India continues to attract the attention of the world, AICC endeavours to strengthen India’s international engagement globally and also work towards making AICC the first port of call for overseas delegations that wish to engage with India and for Indian industry that wishes to access traditional and emerging markets overseas.
-
-        <br /><br />
-
-        The primary goal of the AICC is to undertake activities to connect Indian business with global business. AICC also works towards developing market access for Indian exporters; identifying and addressing the needs of the small sector to make it more competitive; promoting cooperation with counterpart organizations; adopting a proactive and partnership approach with foreign governments on various international issues concerning the Indian economy, among others.
-
-        <br /><br />
-
-        We, on a regular basis, organize International Events, Exhibitions, Seminars, Net-working Sessions with counterpart organizations, multilateral and academic institutions and other policy making bodies to build a strong Trade and Investment relationship between India and the rest of the world.
-
-        <br /><br />
-        Regards,<br />
-        <strong>Rajendra Kumar Goel</strong><br />
-        Chairman, All India Chamber of Commerce
-      </h2>
-
-      <p className="text-sm md:text-base mb-6 text-left">
-        Join the All India Chamber of Commerce and unlock a world of opportunities.
-      </p>
-      
-      <button className="bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-700 hover:to-red-600 text-white px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 shadow-md hover:shadow-orange-500/25 transform hover:scale-105">
-        Become a Member
-      </button>
-    </div>
-
-    {/* Image Content */}
-    <div className="flex justify-center">
-      <img
-        src="/your-image-path.jpg"
-        alt="AICC Vision"
-        className="rounded-xl shadow-lg max-w-full h-auto"
-      />
-    </div>
-  </div>
-</div>
-
-
-            {/* Footer Section */}
-            <footer className="bg-gray-900 text-white py-12">
-              <div className="max-w-7xl mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                  <div className="text-center md:text-left mb-6 md:mb-0">
-                    <h3 className="text-2xl font-bold mb-2">Join the AICC Community</h3>
-                    <p className="text-gray-400">Connect with us for the latest updates and opportunities.</p>
-                  </div>
-                  <div className="flex space-x-4">
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Twitter</a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a>
-                  </div>
-                </div>
-                <div className="mt-8 text-center text-sm text-gray-500">
-                  Copyright © 2022 All India Chamber of Commerce, All rights reserved.
-                </div>
-              </div>
-              </footer>
-
-           
           </>
         );
     }
